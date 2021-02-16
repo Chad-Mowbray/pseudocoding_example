@@ -1,0 +1,52 @@
+Story: Travel Package App (3 points)
+Detail: write a class that:
+  1. Gets a user's budget
+  2. Gets a user's destination based on budget
+  3. Displays a confirmation message to the user
+==============================================================
+
+
+
+What DATA do we need?
+-user's budget
+-destination options
+-user's chosen destination
+
+
+Where does our DATA belong?
+- INSTANCE: user's budget, user's chosen destination
+- CLASS: destination options
+
+
+.................................................
+
+
+What METHODS do we need?
+-get_user_budget
+-get_possible_destinations
+-display_possible_destinations
+-get_user_destination
+-display_confirmation_message
+
+
+What do our METHODS do?
+
+get_user_budget
+  get user input
+  set self.user_budget
+
+get_possible_destinations
+  filter CLASS.destination_options
+  return a list of possible destinations
+
+display_possible_destinations
+  display the filtered list returned by get_possible_destinations
+
+get_user_destination
+  get user_input
+  IF user_input is in the filtered list
+  THEN self.destination is user_input
+  ELSE try again/fail
+
+display_confirmation_message
+  print confirmation message
